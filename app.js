@@ -52,6 +52,4 @@ app.use(function(err, req, res, next) {
     });
 });
 
-require('./routes')(app);
-
 module.exports = app;
