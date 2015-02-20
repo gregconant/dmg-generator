@@ -1,3 +1,10 @@
 body{
 	padding-top:0px;
 }
+ul.nav li.active>a {
+	background-color: #df691a;
+}
+.nav.nav-tabs {
+	border-bottom: 1px solid #df691a;
+
+}

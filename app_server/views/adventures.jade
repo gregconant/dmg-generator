@@ -12,21 +12,125 @@ block content
         h3 &nbsp; Feeling lazy?
       .col-md-4
         h3 &nbsp; Never fear!
+      .col-md-12
+        h4 &nbsp; (These are all placeholders for the time being)
   .row
     .col-md-12
-      button.btn-primary(data-action="something") Go!
-  .row.list-group
-    .col-xs-12.list-group-item
-      h4 Location
-  .row.list-group
-    .col-xs-12.list-group-item
-      h4 Event
-  .row.list-group
-    .col-xs-12.list-group-item
-      h4 Person
-  .row.list-group
-    .col-xs-12.list-group-item
-      h4 Reason
+      ul.nav.nav-tabs
+        li.active
+          a(href="#location", data-toggle="tab", aria-expanded="true") Location-Based
+        li
+          a(href="#event", data-toggle="tab", aria-expanded="false") Event-Based
+      div(id="myTabContent").tab-content
+        .tab-pane.fade.active.in(id="location")
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Location Type
+                .panel-body
+                  h5 Wilderness
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Location Details
+                .panel-body
+                  h5 Escort an NPC to a destination
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Location Type
+                .panel-body
+                  h5 Wilderness
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Other Goals
+                .panel-body
+                  h5 Interfere with the operation of a business
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Adventure Villains
+                .panel-body
+                  h5 Giant bent on plunder
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Adventure Allies
+                .panel-body
+                  h5 Sage
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Adventure Patrons
+                .panel-body
+                  h5 Deity or celestial
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Adventure Introduction
+                .panel-body
+                  h5 a town or village needs volunteers to go to the adventure location.
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Adventure Climax
+                .panel-body
+                  h5 The adventurers must discover the main villain's secret weakness before they can hope to defeat that villain.
+
+        .tab-pane.fade(id="event")
+          .row
+            .col-xs-12
+              ul.list-group
+                li.list-group-item
+                  .row
+                    .col-xs-1
+                      p 1.
+                    .col-xs-11
+                      panel.panel-primary
+                        .panel-heading
+                          .panel-title Start With a Villain
+                li.list-group-item
+                  .row
+                    .col-xs-1
+                      p 2.
+                    .col-xs-11
+                      panel.panel-primary
+                        .panel-heading
+                          .panel-title Determine the Villain's Actions
+                        .panel-body Secure aid from a ruler or council.
+                         
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Event-Based Goals
+                .panel-body
+                  h5 Secure aid from a ruler or council.
+
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Framing Events
+                .panel-body
+                  h5 Lunar eclipse
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Complications
+                .panel-body
+                  h5 Friend quandary
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Twists
+                .panel-body
+                  h5 The adventurers must cooperate with a known enemy to achieve the goal.
+          .row
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading Side Quests
+                .panel-body
+                  h5 Discover the fate of a missing NPC.
+  
   .row
     .col-xs-12
       button.btn-primary Save
