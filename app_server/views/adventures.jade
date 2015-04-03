@@ -24,14 +24,13 @@ block content
       div(id="myTabContent").tab-content
         .tab-pane.fade.active.in(id="location")
 
-          each adventureGroup in adventureInfo
-            each component in adventureGroup.adventureComponents
-              .row
-                .col-xs-12
-                  .panel.panel-default
-                    .panel-heading= component.title
-                    .panel-body
-                      h5= component.value
+          each component in locationAdventureData.adventureComponents
+            .row
+              .col-xs-12
+                .panel.panel-default
+                  .panel-heading= component.title
+                  .panel-body
+                    h5= component.value
 
         .tab-pane.fade(id="event")
           .row
@@ -53,39 +52,15 @@ block content
                       panel.panel-primary
                         .panel-heading
                           .panel-title Determine the Villain's Actions
-                        .panel-body Secure aid from a ruler or council.
-                         
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Event-Based Goals
-                .panel-body
-                  h5 Secure aid from a ruler or council.
 
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Framing Events
-                .panel-body
-                  h5 Lunar eclipse
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Complications
-                .panel-body
-                  h5 Friend quandary
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Twists
-                .panel-body
-                  h5 The adventurers must cooperate with a known enemy to achieve the goal.
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Side Quests
-                .panel-body
-                  h5 Discover the fate of a missing NPC.
-  
+          each component in eventAdventureData.adventureComponents
+            .row
+              .col-xs-12
+                .panel.panel-default
+                  .panel-heading= component.title
+                  .panel-body
+                    h5= component.value
+                         
   .row
     .col-xs-12
       button.btn-primary Save
