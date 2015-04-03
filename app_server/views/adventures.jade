@@ -23,54 +23,15 @@ block content
           a(href="#event", data-toggle="tab", aria-expanded="false") Event-Based
       div(id="myTabContent").tab-content
         .tab-pane.fade.active.in(id="location")
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Location Type
-                .panel-body
-                  h5 Wilderness
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Location Details
-                .panel-body
-                  h5 Escort an NPC to a destination
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Other Goals
-                .panel-body
-                  h5 Interfere with the operation of a business
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Adventure Villains
-                .panel-body
-                  h5 Giant bent on plunder
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Adventure Allies
-                .panel-body
-                  h5 Sage
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Adventure Patrons
-                .panel-body
-                  h5 Deity or celestial
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Adventure Introduction
-                .panel-body
-                  h5 a town or village needs volunteers to go to the adventure location.
-          .row
-            .col-xs-12
-              .panel.panel-default
-                .panel-heading Adventure Climax
-                .panel-body
-                  h5 The adventurers must discover the main villain's secret weakness before they can hope to defeat that villain.
+
+          each adventureGroup in adventureInfo
+            each component in adventureGroup.adventureComponents
+              .row
+                .col-xs-12
+                  .panel.panel-default
+                    .panel-heading= component.title
+                    .panel-body
+                      h5= component.value
 
         .tab-pane.fade(id="event")
           .row
